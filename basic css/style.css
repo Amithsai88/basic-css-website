@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1;
+  background: #fff;
+}
+
+nav,
+header,
+footer {
+  display: block;
+}
+hr {
+  margin: 0;
+}
+article p {
+  font-size: 30px;
+  padding: 20px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+/* Navbar */
+
+.main-nav {
+  background: #eee;
+  width: 100%;
+  margin: 0;
+  min-height: 60px;
+}
+.main-nav .main-menu {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.main-nav ul li {
+  list-style: none;
+  padding: 20px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.signup {
+  margin-left: auto;
+}
+.main-nav ul li a:hover {
+  background: lime;
+  color: #fff;
+}
+.main-nav ul li.dropdown {
+  display: none;
+}
+
+/* Form and iframe */
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 4% 0%;
+}
+#section1 {
+  background: #076dff;
+  background: linear-gradient(#00ff00, #3cb371);
+}
+.container .flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container .flexbox::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.container .flexbox .frm {
+  flex: 1;
+  justify-content: center;
+  padding-left: 15%;
+  padding-bottom: 1%;
+}
+.container .flexbox .frm h1 {
+  color: white;
+  font-size: 56px;
+  margin: 0;
+  line-height: 70px;
+}
+.container .flexbox .frm label {
+  color: white;
+  font-size: 20px;
+  line-height: 2em;
+  font-weight: 600;
+}
+.username {
+  width: 60%;
+  line-height: 1.6em;
+  font-size: 15px;
+  min-width: 100px;
+  border-radius: 5px;
+}
+input {
+  padding: 5px;
+}
+input:hover {
+  border: 3px red solid;
+}
+.password {
+  width: 60%;
+  line-height: 1.6em;
+  min-width: 100px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.container .flexbox .ifrm {
+  flex: 1;
+  justify-content: center;
+}
+
+/* iframe */
+.ifrm {
+  padding: 0% 4% 0 3%;
+  text-align: center;
+}
+iframe {
+  min-width: 300px;
+}
+
+/* header */
+header {
+  display: block;
+  margin: auto;
+}
+header h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+/*Cards*/
+.cArds {
+  display: flex;
+  text-align: center;
+  margin: 2% 5%;
+  gap: 1em;
+  align-items: center;
+}
+.card1 {
+  flex: 1;
+  width: 400px;
+  height: 400px;
+  padding: 3% 1%;
+  border: 2px black solid;
+}
+.card1 p {
+  font-size: 25px;
+}
+.card2 p {
+  font-size: 25px;
+}
+.card3 p {
+  font-size: 25px;
+}
+.card2 {
+  flex: 1;
+  width: 400px;
+  height: 400px;
+  padding: 3% 0;
+  border: 2px black solid;
+}
+.card3 {
+  flex: 1;
+  width: 400px;
+  height: 400px;
+  padding: 3% 0;
+  border: 2px black solid;
+}
+
+/* Button */
+.learn {
+  text-align: center;
+  margin: 0 0 2.5%;
+}
+.learn button {
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background: lime;
+  width: 250px;
+  border-radius: 5px;
+}
+.learn button:hover {
+  border: 3px black solid;
+}
+
+/* main */
+.col-1 {
+  width: 58.33%;
+}
+.col-2 {
+  width: 41.66%;
+}
+.slope-icon img {
+  display: block;
+  margin: auto;
+  box-shadow: -2px -2px 5px 2px rgba(0, 0, 0, 0.15),
+    2px 2px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* footer */
+footer {
+  margin: 0;
+  background: grey;
+  height: 50px;
+}
+.copyright {
+  text-align: center;
+}
+.copyright h3 {
+  display: block;
+  color: white;
+  margin: auto;
+  padding-top: 15px;
+}
+/* Mobile */
+@media screen and (max-width: 680px) {
+  .main-nav ul li:not(:nth-child(1)) {
+    display: none;
+  }
+  .main-nav ul li.dropdown {
+    display: block;
+    margin-left: auto;
+  }
+
+  ul.main-menu.responsive {
+    flex-direction: column;
+  }
+  ul.main-menu.responsive .dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  ul.main-menu.responsive li {
+    display: inline;
+  }
+  ul.main-menu.responsive li.signup {
+    margin-left: 0;
+  }
+  ul.main-menu.responsive li a {
+    text-align: left;
+  }
+  header {
+    display: block;
+    margin: 10% 0;
+  }
+  .cArds {
+    flex-direction: column;
+  }
+  [class*="card"] {
+    height: 100%;
+    width: 100%;
+  }
+  article p {
+    font-size: 25px;
+  }
+  .slope-icon {
+    margin: 10px;
+  }
+  .slope-icon img {
+    width: 100%;
+  }
+  .col-1,
+  .col-2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .slope-icon {
+    margin: 10px;
+  }
+  .slope-icon img {
+    width: 100%;
+  }
+}
